@@ -1,10 +1,32 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import { render } from "react-dom"
+import { Router } from "@reach/router"
+
+import './index.css'
 import App from './App';
+import Learn from './page/learn/index'
+import Type from './page/learn/type'
+
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const NotFound = () => (
+  <div>Sorry, nothing here.</div>
+)
+
+const LearnIndex = () => (
+  <div>Something to Learn.</div>
+)
+
+render((
+  <Router>
+    <App path="/" />
+    <Learn path="Learn">
+      <LearnIndex path="/" />
+      <Type path=":type" />
+    </Learn>
+    <NotFound default />
+  </Router>
+), document.getElementById('root'))
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
