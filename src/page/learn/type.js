@@ -8,23 +8,27 @@ class Type extends React.Component {
     markdown: ''
   }
 
-  getData () {
-    fetch(DataList[this.props.type]['md'])
-      .then(res => res.text())
-      .then(text => this.setState({ markdown: text }));
-  }
-
-  componentDidMount() {
-    this.getData()
-  }
-
-  componentDidUpdate({ type }) {
-    if (type !== this.props.type) {
-      this.getData()
+  getData(type) {
+    if (DataList[type]) {
+      fetch(DataList[type]['md'])
+        .then(res => res.text())
+        .then(text => this.setState({ markdown: text }));
     }
   }
 
-  render () {
+  componentDidMount() {
+    let { type } = this.props.match.params
+    this.getData(type)
+  }
+
+  componentDidUpdate({ match }) {
+    const type = this.props.match.params.type
+    if (match.params.type !== type) {
+      this.getData(type)
+    }
+  }
+
+  render() {
     return (
       <SyntaxHighlighter language="html">
         <Markdown source={this.state.markdown} />

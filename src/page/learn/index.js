@@ -1,45 +1,38 @@
 import React from 'react';
-import { Link, navigate } from "@reach/router"
+import {
+  Link,
+  Switch,
+  Route,
+} from "react-router-dom";
 import { DataList } from './data'
 import './index.css'
+import Type from './type'
 
 class Learn extends React.Component {
-  state = {
-    nav: '',
-  }
-  componentDidMount () {
-    this.setState({
-      nav: this.props['*']
-    })
-  }
-
-  /**
-   * 切换菜单后跳转到对应子页面
-   * @param {object} data 参数对象
-   */
-  handleChange = (data) => {
-    navigate(this.props.uri + '/' + DataList[data]['type'])
-    this.setState({
-      nav: DataList[data]['type']
-    })
-  }
 
   isActive = (data) => {
-    return this.state.nav === DataList[data]['type'] ? 'active' : null
+    return this.props.match.params.type === DataList[data]['type'] ? 'active' : null
   }
 
   render () {
+    const { match } = this.props
     return (
       <>
-        <h2>{this.props.path}</h2>
+        <h2>Learn</h2>
         <ul>
           {Object.keys(DataList).map(data =>
             <li key={data} className={this.isActive(data)}>
-              <span onClick={() => this.handleChange(data)} >{DataList[data]['type']}</span>
+              <Link to={'/Learn/' + DataList[data]['type']}>{DataList[data]['type']}</Link>
             </li>
           )}
         </ul>
         {this.props.children}
+        <Switch>
+          <Route path={`${match.path}/:type`} component={Type} />
+          <Route path={match.path}>
+            <h3>Please select a type.</h3>
+          </Route>
+        </Switch>
         <Link to="/">Home</Link>
       </>
     )

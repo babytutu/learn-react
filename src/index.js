@@ -1,30 +1,25 @@
 import React from 'react';
 import { render } from "react-dom"
-import { Router } from "@reach/router"
+import {
+  HashRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 
 import './index.css'
 import App from './App';
 import Learn from './page/learn/index'
-import Type from './page/learn/type'
 
 import * as serviceWorker from './serviceWorker';
 
-const NotFound = () => (
-  <div>Sorry, nothing here.</div>
-)
-
-const LearnIndex = () => (
-  <div>Something to Learn.</div>
-)
-
 render((
-  <Router>
-    <App path="/" />
-    <Learn path="Learn">
-      <LearnIndex path="/" />
-      <Type path=":type" />
-    </Learn>
-    <NotFound default />
+  <Router basename="/learn-react">
+    <Switch>
+      <Route path="/Learn" component={Learn} />
+      <Route path="/">
+        <App />
+      </Route>
+    </Switch>
   </Router>
 ), document.getElementById('root'))
 
