@@ -1,19 +1,17 @@
 import React from 'react';
 import Markdown from 'react-markdown'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { DataList } from './data'
 
 class Type extends React.Component {
   state = {
-    markdown: ''
+    markdown: '',
   }
 
   getData(type) {
-    if (DataList[type]) {
-      fetch(DataList[type]['md'])
-        .then(res => res.text())
-        .then(text => this.setState({ markdown: text }));
-    }
+    const mdFolder = process.env.PUBLIC_URL + '/markdown/'
+    fetch(mdFolder + type + '.md')
+      .then(res => res.text())
+      .then(text => this.setState({ markdown: text }))
   }
 
   componentDidMount() {

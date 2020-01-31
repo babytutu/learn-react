@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   Link,
+  NavLink,
   Switch,
   Route,
 } from "react-router-dom";
@@ -10,19 +11,22 @@ import Type from './type'
 
 class Learn extends React.Component {
 
-  isActive = (data) => {
-    return this.props.match.params.type === DataList[data]['type'] ? 'active' : null
+  state = {
+    type: ''
   }
 
   render () {
     const { match } = this.props
     return (
       <>
-        <h2>Learn</h2>
+        <h2>LearnList</h2>
         <ul>
-          {Object.keys(DataList).map(data =>
-            <li key={data} className={this.isActive(data)}>
-              <Link to={'/Learn/' + DataList[data]['type']}>{DataList[data]['type']}</Link>
+          {DataList.map(data =>
+            <li key={data.name}>
+              <NavLink
+                  to={match.path + '/' + data.name}>
+                    {data.name}@<em>{data.version}</em>
+              </NavLink>
             </li>
           )}
         </ul>
@@ -30,7 +34,7 @@ class Learn extends React.Component {
         <Switch>
           <Route path={`${match.path}/:type`} component={Type} />
           <Route path={match.path}>
-            <h3>Please select a type.</h3>
+            <h3>Please select something to Learn.</h3>
           </Route>
         </Switch>
         <Link to="/">Home</Link>
