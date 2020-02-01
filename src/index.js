@@ -7,8 +7,9 @@ import {
 } from "react-router-dom";
 
 import './index.css'
-import App from './App';
+import Home from './page/home/index';
 import Learn from './page/learn/index'
+import Demo from './page/demo/index'
 
 import * as serviceWorker from './serviceWorker';
 
@@ -16,8 +17,9 @@ render((
   <Router basename="/learn-react">
     <Switch>
       <Route path="/Learn" component={Learn} />
+      <Route path="/Demo" component={Demo} />
       <Route path="/">
-        <App />
+        <Home />
       </Route>
     </Switch>
   </Router>

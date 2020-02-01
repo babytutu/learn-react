@@ -1,7 +1,6 @@
 import React from 'react';
 import Markdown from 'react-markdown'
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-
+import codeBlock from './codeBlock'
 class Type extends React.Component {
   state = {
     markdown: '',
@@ -28,10 +27,11 @@ class Type extends React.Component {
 
   render() {
     return (
-      <SyntaxHighlighter language="html">
-        <Markdown source={this.state.markdown} />
-      </SyntaxHighlighter>
-    );
+      <Markdown source={this.state.markdown}
+        renderers={{
+          code: codeBlock
+        }} />
+    )
   }
 }
 
