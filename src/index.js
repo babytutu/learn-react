@@ -14,7 +14,7 @@ import Demo from './page/demo/index'
 import * as serviceWorker from './serviceWorker';
 
 render((
-  <Router basename="/learn-react">
+  <Router>
     <Switch>
       <Route path="/Learn" component={Learn} />
       <Route path="/Demo" component={Demo} />
