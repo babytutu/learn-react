@@ -1,1 +1,16 @@
-@import-normalize
+@import-normalize;
+
+#root{
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.active{
+  color: red;
+}
+
+.link, a{
+  cursor: pointer;
+  color: #333;
+  text-decoration: underline;
+}

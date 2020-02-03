@@ -1,45 +1,64 @@
-import React from 'react'
-import {
-  Link
-} from 'react-router-dom'
-import { list } from './list'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
-class CodePen extends React.Component {
-  state = {
-    iframe: '',
-    id: ''
+import { list, DemoHeight } from './list'
+
+function CodePen () {
+  const [id, setId] = useState(null)
+  const [height, setHeight] = useState(DemoHeight[0])
+  const [loading, setLoading] = useState(false)
+
+  const handleChange = (e) => {
+    const height = e.target.value
+    setHeight(height)
   }
 
-  componentDidMount () {
-    this.setUrl(list[0].id)
+  const setUrl = (data) => {
+    if (!loading && (id !== data)) {
+      setId(data)
+      setLoading(true)
+    }
   }
 
-  setUrl = (id) => {
-    this.setState({
-      iframe: '',
-      id: ''
-    })
-    const iframe = `https://codepen.io/babytutu/embed/${id}?height=265&default-tab=js,result`
-    this.setState({
-      iframe,
-      id
-    })
+  const afterLoad = () => {
+    setLoading(false)
   }
 
-  render () {
-    return (
-      <>
+  const style = () => {
+    return {
+      height,
+      width: '100%',
+      opacity: Number(!loading)
+    }
+  }
+
+  return (
+    <>
+      <header>
+        <small><Link to="/"> back </Link></small>
         <h1>CodePen Demo</h1>
-        <ul>
-          {list.map(item =>
-            <li className={item.id === this.state.id ? 'active' : ''} key={item.title} onClick={() => this.setUrl(item.id)}>{item.title}</li>
+      </header>
+      <p>
+        <label htmlFor="selectLabal">Change Demo Height </label>
+        <select value={height} onChange={handleChange} id="selectLabal">
+          {DemoHeight.map(i =>
+            <option key={i} value={i}>{i}</option>
           )}
-        </ul>
-        <iframe height="265" style={{width: "100%"}} scrolling="no" title="React:JSX" src={this.state.iframe} frameBorder="no" />
-        <Link to="/">Home</Link>
-      </>
-    )
-  }
+        </select>
+      </p>
+      {list.map((item) =>
+      <h3 key={item.id}
+          className={item.id === id ? 'active' : 'link'}
+          onClick={() => setUrl(item.id)}>{item.title}</h3>
+      )}
+      {loading &&
+        <p>Demo is loading!</p>
+      }
+      {id &&
+        <iframe style={style()} scrolling="no" title="React:JSX" src={`https://codepen.io/babytutu/embed/${id}?height=${height}&default-tab=js,result`} frameBorder="no" onLoad={afterLoad} />
+      }
+    </>
+  )
 }
 
 export default CodePen

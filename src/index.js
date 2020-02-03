@@ -18,9 +18,7 @@ render((
     <Switch>
       <Route path="/Learn" component={Learn} />
       <Route path="/Demo" component={Demo} />
-      <Route path="/">
-        <Home />
-      </Route>
+      <Route path="/" component={Home} />
     </Switch>
   </Router>
 ), document.getElementById('root'))
