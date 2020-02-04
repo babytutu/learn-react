@@ -1,26 +1,16 @@
 import React from 'react';
 import { render } from "react-dom"
-import {
-  HashRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
-
-import './index.css'
-import Home from './page/home/index';
-import Learn from './page/learn/index'
-import Demo from './page/demo/index'
-
+import Routes from "./router";
 import * as serviceWorker from './serviceWorker';
+import './index.css'
 
 render((
-  <Router>
-    <Switch>
-      <Route path="/Learn" component={Learn} />
-      <Route path="/Demo" component={Demo} />
-      <Route path="/" component={Home} />
-    </Switch>
-  </Router>
+  <>
+    <header>
+      <h1>Learn React</h1>
+    </header>
+    <Routes />
+  </>
 ), document.getElementById('root'))
 
 // If you want your app to work offline and load faster, you can change

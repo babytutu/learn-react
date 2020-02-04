@@ -1,4 +1,9 @@
-@import-normalize;
+@import 'normalize';
+
+body{
+  font-size: 14px;
+  line-height: 1.2;
+}
 
 #root{
   max-width: 800px;
@@ -9,7 +14,7 @@
   color: red;
 }
 
-.link, a{
+a{
   cursor: pointer;
   color: #333;
   text-decoration: underline;

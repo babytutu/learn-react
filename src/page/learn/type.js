@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom'
 import Markdown from 'react-markdown'
 import codeBlock from './codeBlock'
 
-function Type () {
+function Type (props) {
   const [markdown, setMarkdown] = useState('')
-  const [active, setActive] = useState('')
 
   function getData(type) {
     const mdFolder = process.env.PUBLIC_URL + '/markdown/'
@@ -13,17 +11,14 @@ function Type () {
       .then(res => res.text())
       .then(text => {
         setMarkdown(text)
-        setActive(type)
       })
   }
 
-  let { type } = useParams()
+  const type = props.type
 
   useEffect(() => {
-    if (type !== active) {
-      getData(type)
-    }
-  })
+    getData(type)
+  }, [type])
 
   return (
     <Markdown source={markdown}

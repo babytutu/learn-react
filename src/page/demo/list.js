@@ -45,5 +45,15 @@ export const list = [
     id: "povMdLG",
     title: "React:RenderHtml",
     url: "https://codepen.io/babytutu/pen/povMdLG"
+  },
+  {
+    id: "ZEYgvzY",
+    title: "React:HOOK-useState",
+    url: "https://codepen.io/babytutu/pen/ZEYgvzY"
+  },
+  {
+    id: "ExaqQaE",
+    title: "React:HOOK-useEffect",
+    url: "https://codepen.io/babytutu/pen/ExaqQaE"
   }
 ]

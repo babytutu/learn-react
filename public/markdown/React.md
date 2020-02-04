@@ -524,7 +524,7 @@ function Example() {
   // Similar to componentDidMount and componentDidUpdate:
   React.useEffect(() => {
     console.log('count:', count)
-  })
+  }, [count]) // only count changed will run
 
   return (
     <div>
