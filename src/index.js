@@ -1,16 +1,11 @@
 import React from 'react';
 import { render } from "react-dom"
-import Routes from "./router";
 import * as serviceWorker from './serviceWorker';
 import './index.css'
+import App from './app'
 
 render((
-  <>
-    <header>
-      <h1>Learn React</h1>
-    </header>
-    <Routes />
-  </>
+  <App />
 ), document.getElementById('root'))
 
 // If you want your app to work offline and load faster, you can change

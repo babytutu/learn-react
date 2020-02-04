@@ -3,22 +3,19 @@ import Markdown from 'react-markdown'
 import codeBlock from './codeBlock'
 
 function Type (props) {
+  const type = props.type
   const [markdown, setMarkdown] = useState('')
+
+  useEffect(() => {
+    getData(type)
+  }, [type])
 
   function getData(type) {
     const mdFolder = process.env.PUBLIC_URL + '/markdown/'
     fetch(mdFolder + type + '.md')
       .then(res => res.text())
-      .then(text => {
-        setMarkdown(text)
-      })
+      .then(text => setMarkdown(text))
   }
-
-  const type = props.type
-
-  useEffect(() => {
-    getData(type)
-  }, [type])
 
   return (
     <Markdown source={markdown}

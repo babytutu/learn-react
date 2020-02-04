@@ -2,7 +2,7 @@ import React from "react";
 import { useHistory } from 'react-router-dom'
 import './back.css'
 
-function Back() {
+function BackToTop() {
   const history = useHistory()
   function handleClick () {
     history.push('/')
@@ -12,4 +12,4 @@ function Back() {
   )
 }
 
-export default Back
+export default BackToTop

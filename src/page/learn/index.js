@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import {
   NavLink,
   useRouteMatch,
@@ -6,43 +6,47 @@ import {
 
 import { DataList } from './data'
 import Type from './type'
-import Back from './../../components/back'
+import BackToTop from '../../components/backToTop'
+import PageHeader from '../../components/pageHeader'
 
-function Markdown() {
-  let match = useRouteMatch("/Learn/:type");
+function Markdown({ path }) {
+  let match = useRouteMatch(path + "/:type")
 
-  if (match) {
-    // Do whatever you want with the match...
-    return <Type type={match.params.type} />
-  } else {
+  if (!match) {
     return null
+  }
+
+  const type = match.params && match.params.type
+
+  let isActive = DataList.map(i => i.name).includes(type)
+
+  if (match && isActive) {
+    // Do whatever you want with the match...
+    return <Type type={type} />
+  } else {
+    return <p>{type} Not Found!</p>
   }
 }
 
 function Learn(props) {
-  const { match } = props
+  const path = props.match.path
   return (
     <>
       <header>
-        <h2>Learn List</h2>
-        <Back />
+        <PageHeader {...props} />
+        <BackToTop />
       </header>
       <ul>
         {DataList.map(data =>
           <li key={data.name}>
-            <NavLink
-                to={match.path + '/' + data.name}>
-                  {data.name}@<em>{data.version}</em>
-            </NavLink>
+            <NavLink to={path + '/' + data.name}>{data.name}@{data.version}</NavLink>
           </li>
         )}
       </ul>
       {props.children}
-      <Markdown />
+      <Markdown path={path} />
     </>
   )
 }
-
-
 
 export default Learn

@@ -5,11 +5,12 @@ import {
 } from 'react-router-dom'
 
 import { list } from './list'
-import Back from './../../components/back'
+import BackToTop from '../../components/backToTop'
+import PageHeader from '../../components/pageHeader'
 import Demo from './demo'
 
-function CodepenDemo () {
-  let match = useRouteMatch("/Demo/:id");
+function CodepenDemo ({ path }) {
+  let match = useRouteMatch(path + "/:id");
 
   if (match) {
     // Do whatever you want with the match...
@@ -20,22 +21,21 @@ function CodepenDemo () {
 }
 
 function CodePen (props) {
+  const path = props.match.path
   return (
     <>
       <header>
-        <h2>CodePen Demo</h2>
-        <Back />
+        <PageHeader {...props} />
+        <BackToTop />
       </header>
       <ul>
         {list.map((item) =>
           <li key={item.id}>
-            <NavLink
-                to={props.match.path + '/' + item.id}>{item.title}
-            </NavLink>
+            <NavLink to={path + '/' + item.id}>{item.title}</NavLink>
           </li>
         )}
       </ul>
-      <CodepenDemo />
+      <CodepenDemo path={path} />
     </>
   )
 }
