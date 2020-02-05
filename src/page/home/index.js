@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
-import PageHeader from '../../components/pageHeader'
+import PageHeader from 'components/pageHeader'
 
-import { Menu } from './menu'
+import { MenuList } from 'data/menuList'
 
 function Home (props) {
   return (
@@ -12,7 +12,7 @@ function Home (props) {
         <PageHeader {...props} />
       </header>
       <ul>
-        {Menu.map((item =>
+        {MenuList.map((item =>
           <li key={item.path}><Link to={item.path}>{item.name}</Link></li>
         ))}
       </ul>

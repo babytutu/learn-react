@@ -3,8 +3,8 @@ import {
   useLocation,
 } from 'react-router-dom'
 
-import PageHeader from '../../components/pageHeader'
-import BackToTop from '../../components/backToTop'
+import PageHeader from 'components/pageHeader'
+import BackToTop from 'components/backToTop'
 
 function NoMath (props) {
   let location = useLocation()

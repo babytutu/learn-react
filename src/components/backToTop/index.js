@@ -1,6 +1,6 @@
 import React from "react";
 import { useHistory } from 'react-router-dom'
-import './back.css'
+import style from './style.module.css'
 
 function BackToTop() {
   const history = useHistory()
@@ -8,7 +8,7 @@ function BackToTop() {
     history.push('/')
   }
   return (
-    <span className="backBtn" onClick={handleClick}>back</span>
+    <span className={style.backBtn} onClick={handleClick}>back</span>
   )
 }
 

@@ -4,9 +4,9 @@ import {
   useRouteMatch,
 } from 'react-router-dom'
 
-import { list } from './list'
-import BackToTop from '../../components/backToTop'
-import PageHeader from '../../components/pageHeader'
+import { DemoList } from 'data/demoList'
+import BackToTop from 'components/backToTop'
+import PageHeader from 'components/pageHeader'
 import Demo from './demo'
 
 function CodepenDemo ({ path }) {
@@ -29,7 +29,7 @@ function CodePen (props) {
         <BackToTop />
       </header>
       <ul>
-        {list.map((item) =>
+        {DemoList.map((item) =>
           <li key={item.id}>
             <NavLink to={path + '/' + item.id}>{item.title}</NavLink>
           </li>

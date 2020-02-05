@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { DemoHeight } from './list'
+import { DemoHeight } from 'data/demoList'
 
 function Demo (props) {
   const [height, setHeight] = useState(DemoHeight[0])

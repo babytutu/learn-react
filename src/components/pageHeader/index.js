@@ -1,10 +1,8 @@
 import React from 'react'
 
-function PageHeader (props) {
+function PageHeader ({ meta }) {
   return (
-    <div>
-      <h2>{props.title}</h2>
-    </div>
+    <h2>{meta.title}</h2>
   )
 }
 

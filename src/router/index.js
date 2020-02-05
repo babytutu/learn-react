@@ -15,7 +15,7 @@ function RouteList () {
           <Route key={item.path}
                 path={item.path}
                 exact={item.exact}
-                render={(props) => <item.component {...props} {...item.meta} />}
+                render={(props) => <item.component {...props} meta={item.meta} />}
           />
         )}
       </Switch>

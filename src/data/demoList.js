@@ -1,6 +1,6 @@
 export const DemoHeight = ['300px', '400px', '600px']
 
-export const list = [
+export const DemoList = [
   {
     id: "bGNPPVL",
     title: "React:JSX",

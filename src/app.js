@@ -1,7 +1,7 @@
 import React from 'react'
 import RouteList from "./router/index";
 
-function App (props) {
+function App() {
   return (
     <>
       <h1>Learn-React</h1>
