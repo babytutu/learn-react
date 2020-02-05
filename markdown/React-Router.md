@@ -1,4 +1,4 @@
-# React-Router
+# React Router
 
 [The Future of React Router and @reach/router](https://reacttraining.com/blog/reach-react-router-future/)
 
