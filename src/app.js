@@ -1,13 +1,7 @@
 import React from 'react'
-import RouteList from "./router/index";
 
 function App() {
-  return (
-    <>
-      <h1>Learn-React</h1>
-      <RouteList />
-    </>
-  )
+  return <h1>Learn React</h1>
 }
 
 export default App

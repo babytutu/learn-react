@@ -1,14 +1,16 @@
 import React from 'react';
 import { render } from "react-dom"
 import { Provider } from 'react-redux'
-import store from './store'
+import store from './redux'
 import * as serviceWorker from './serviceWorker';
 import './index.css'
-import App from './app'
+import Router from "./router/index";
+import App from './App'
 
 render(
   <Provider store={store}>
     <App />
+    <Router />
   </Provider>,
   document.getElementById('root')
 )

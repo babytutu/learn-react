@@ -1,9 +1,11 @@
 import React from 'react'
 
 function PageHeader ({ meta }) {
-  return (
-    <h2>{meta.title}</h2>
-  )
+  if (meta && meta.title) {
+    return <h2>{meta.title}</h2>
+  } else {
+    return null
+  }
 }
 
 export default PageHeader

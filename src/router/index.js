@@ -6,10 +6,12 @@ import {
 } from "react-router-dom";
 
 import { Routes } from './routes'
+import BackToHome from 'components/backToHome'
 
 function RouteList () {
   return (
     <Router>
+      <BackToHome />
       <Switch>
         {Routes.map(item =>
           <Route key={item.path}

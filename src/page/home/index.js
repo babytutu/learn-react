@@ -1,23 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
-import PageHeader from 'components/pageHeader'
+import { menuList } from 'data/list'
 
-import { MenuList } from 'data/menuList'
-
-function Home (props) {
+function Home () {
   return (
     <>
-      <header>
-        <PageHeader {...props} />
-      </header>
-      <ul>
-        {MenuList.map((item =>
-          <li key={item.path}><Link to={item.path}>{item.name}</Link></li>
-        ))}
-      </ul>
+      {menuList.map(i =>
+        <div key={i.title}>
+          <h2>{i.title}</h2>
+          <ul>
+            {i.children.map(item =>
+              <li key={item.id}>
+                <Link to={i.path + item.id}>{item.title}</Link>
+              </li>
+            )}
+          </ul>
+        </div>
+      )}
     </>
   )
 }
 
-export default Home;
+export default Home

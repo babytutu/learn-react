@@ -1,27 +1,27 @@
 import Home from 'page/home'
-import studyNotes from 'page/studyNotes'
-import reactDemo from 'page/reactDemo'
-import reactReduxDemo from 'page/reactReduxDemo/index'
+import Note from 'page/Note'
+import Demo from 'page/demo'
+import Redux from 'page/redux/index'
 import NoMath from 'page/noMatch'
 
 export const Routes = [
   {
-    path: '/studyNotes',
-    component: studyNotes,
+    path: '/note/:type',
+    component: Note,
     meta: {
-      title: 'Study Notes',
+      title: 'Notes',
     }
   },
   {
-    path: '/reactDemo',
-    component: reactDemo,
+    path: '/demo/:type',
+    component: Demo,
     meta: {
-      title: 'React Demo',
+      title: 'CodePen',
     }
   },
   {
-    path: '/reactReduxDemo',
-    component: reactReduxDemo,
+    path: '/redux',
+    component: Redux,
     meta: {
       title: 'React Redux Demo',
     }
