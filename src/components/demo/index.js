@@ -6,13 +6,16 @@ function Demo ({ url }) {
   useEffect(() => setLoading(true), [url])
 
   return (
-    <iframe height="600" width="100%"
-      scrolling="no"
-      frameBorder="no"
-      style={{'opacity': Number(!loading)}}
-      src={url}
-      title="Demo"
-      onLoad={() => setLoading(false)}></iframe>
+    <>
+      {loading && <p>loading</p>}
+      <iframe height="600" width="100%"
+        scrolling="no"
+        frameBorder="no"
+        style={{'opacity': Number(!loading)}}
+        src={url}
+        title="Demo"
+        onLoad={() => setLoading(false)}></iframe>
+    </>
   )
 }
 

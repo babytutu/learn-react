@@ -3,6 +3,7 @@ import Note from 'page/Note'
 import Demo from 'page/demo'
 import Redux from 'page/redux/index'
 import NoMath from 'page/noMatch'
+import Api from 'page/api'
 
 export const Routes = [
   {
@@ -24,6 +25,13 @@ export const Routes = [
     component: Redux,
     meta: {
       title: 'React Redux Demo',
+    }
+  },
+  {
+    path: '/api',
+    component: Api,
+    meta: {
+      title: 'API Demo',
     }
   },
   {

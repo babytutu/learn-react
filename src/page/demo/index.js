@@ -17,7 +17,7 @@ function CodePen (props) {
       <PageHeader {...props} />
       <ul>
         {codepenList.map((item) =>
-          <li key={item.id}>
+          <li key={item.id} className={type === item.id ? 'active' : null}>
             <NavLink exact to={item.id}>{item.title}</NavLink>
           </li>
         )}

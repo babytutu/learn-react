@@ -87,8 +87,30 @@ export const menuList = [
     children: [
       {
         id: 'redux',
-        title: 'React Redux Demo'
+        title: 'React Redux'
+      },
+      {
+        id: 'api',
+        title: 'API'
       }
     ]
   },
+]
+
+export const apiList = [
+  'https://api.apis.guru/v2/specs/amazonaws.com/accessanalyzer/2019-11-01/swagger.json',
+  'https://api.apis.guru/v2/specs/amazonaws.com/codeguru-reviewer/2019-09-19/swagger.json',
+  'https://api.apis.guru/v2/specs/amazonaws.com/codeguruprofiler/2019-07-18/swagger.json',
+  'https://api.apis.guru/v2/specs/amazonaws.com/codestar-connections/2019-12-01/swagger.json',
+  'https://api.apis.guru/v2/specs/amazonaws.com/compute-optimizer/2019-11-01/swagger.json',
+  'https://api.apis.guru/v2/specs/amazonaws.com/detective/2018-10-26/swagger.json',
+  'https://api.apis.guru/v2/specs/amazonaws.com/ebs/2019-11-02/swagger.json',
+  'https://api.apis.guru/v2/specs/amazonaws.com/frauddetector/2019-11-15/swagger.json',
+  'https://api.apis.guru/v2/specs/amazonaws.com/imagebuilder/2019-12-02/swagger.json',
+  'https://api.apis.guru/v2/specs/amazonaws.com/kendra/2019-02-03/swagger.json',
+  'https://api.apis.guru/v2/specs/amazonaws.com/kinesis-video-signaling/2019-12-04/swagger.json',
+  'https://api.apis.guru/v2/specs/amazonaws.com/networkmanager/2019-07-05/swagger.json',
+  'https://api.apis.guru/v2/specs/amazonaws.com/outposts/2019-12-03/swagger.json',
+  'https://api.apis.guru/v2/specs/amazonaws.com/sagemaker-a2i-runtime/2019-11-07/swagger.json',
+  'https://api.apis.guru/v2/specs/amazonaws.com/schemas/2019-12-02/swagger.json',
 ]
