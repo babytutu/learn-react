@@ -1,8 +1,9 @@
 import React from 'react'
+import styles from './pageHeader.module.css'
 
 function PageHeader ({ meta }) {
   if (meta && meta.title) {
-    return <h2>{meta.title}</h2>
+    return <h1 className={styles.header}>{meta.title}</h1>
   } else {
     return null
   }

@@ -1,14 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
+import PageHeader from 'components/pageHeader'
 import { menuList } from 'data/list'
 
-function Home () {
+function Home (props) {
   return (
     <>
+      <PageHeader {...props} />
       {menuList.map(i =>
         <div key={i.title}>
-          <h2>{i.title}</h2>
+          <h3>{i.title}</h3>
           <ul>
             {i.children.map(item =>
               <li key={item.id}>

@@ -39,7 +39,7 @@ export const Routes = [
     component: Home,
     exact: true,
     meta: {
-      title: 'Home',
+      title: 'Learn React',
     }
   },
   {

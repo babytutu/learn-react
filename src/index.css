@@ -1,13 +1,15 @@
 @import 'normalize';
 
 body{
-  font-size: 14px;
-  line-height: 1.2;
+  font-size: 18px;
+  line-height: 1.4;
+  margin: 0;
 }
 
 #root{
   max-width: 800px;
   margin: 0 auto;
+  padding: .5em;
 }
 
 .active{
@@ -18,8 +20,4 @@ a{
   cursor: pointer;
   color: #333;
   text-decoration: none;
-}
-
-.clickable{
-  cursor: pointer;
 }

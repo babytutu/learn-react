@@ -5,7 +5,7 @@ import PageHeader from 'components/pageHeader'
 function Apis (props) {
   const [res, setRes] = useState({})
   const [api, setApi] = useState('')
-  const [load, setLoad] = useState(false)
+  const [load, setLoad] = useState(true)
   useEffect(() => {
     setLoad(true)
     if (api) {
@@ -23,12 +23,13 @@ function Apis (props) {
       <a href="https://apis.guru/api-doc/" rel="noopener noreferrer" target="_blank">APIs.guru</a>
       <ul>
         {apiList.map(i =>
-          <li key={i} className={i === api ? 'active' : 'clickable'}>
+          <li key={i} className={i === api ? 'active' : ''}>
             <span onClick={() => setApi(i)}>{i.replace('https://api.apis.guru/v2/specs/amazonaws.com/', '').replace('/swagger.json', '')}</span>
           </li>
         )}
       </ul>
-      {api && !load &&
+      {api && load && <p>loading</p>}
+      {!load &&
         <>
           <h2>Info</h2>
           <h3>{res.title} [{res.version}]</h3>

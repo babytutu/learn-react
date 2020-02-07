@@ -5,11 +5,9 @@ import store from './redux'
 import * as serviceWorker from './serviceWorker';
 import './index.css'
 import Router from "./router/index";
-import App from './App'
 
 render(
   <Provider store={store}>
-    <App />
     <Router />
   </Provider>,
   document.getElementById('root')
