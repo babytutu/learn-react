@@ -14,7 +14,7 @@ export const Routes = [
     }
   },
   {
-    path: '/demo/:type',
+    path: '/demo',
     component: Demo,
     meta: {
       title: 'CodePen',

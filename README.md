@@ -1,6 +1,17 @@
 # Learn React
 
-## CodePen
+## Notes
+
+- React@16.12.0
+- Create React App@3.3.0
+- React Router@5.1.2
+- React Redux@7.1.3
+- React Redux Demo@7.1.3
+- Testing Overview
+
+## Demos
+
+### CodePen
 
 - JSX
 - Component & Props
@@ -14,15 +25,21 @@
 - HOOK-useState
 - HOOK-useEffect
 
-## Notes
+### React Redux
+### API
 
-- React@16.12.0
-- Create-React-App@3.3.0
-- React-Router@5.1.2
-- React-Redux@7.1.3
-- React-Redux-Demo@7.1.3
+## Folder
+```
+|-- public
+|-- src
+|    |-- components
+|    |-- data
+|    |-- page
+|    |-- redux
+|    |-- router
+|    |-- test
+|    |-- index.css
+|    |-- index.js
+```
 
-## Demos
-
-- React Redux
-- API
+```

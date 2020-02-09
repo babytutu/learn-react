@@ -5,19 +5,23 @@ export const NoteList = [
   },
   {
     id: 'Create-React-App',
-    title: 'Create-React-App@3.3.0',
+    title: 'Create React App@3.3.0',
   },
   {
     id: 'React-Router',
-    title: 'React-Router@5.1.2',
+    title: 'React Router@5.1.2',
   },
   {
     id: 'React-Redux',
-    title: 'React-Redux@7.1.3'
+    title: 'React Redux@7.1.3'
   },
   {
     id: 'React-Redux-Demo',
-    title: 'React-Redux-Demo@7.1.3'
+    title: 'React Redux Demo@7.1.3'
+  },
+  {
+    id: 'Testing-Overview',
+    title: 'Testing Overview'
   }
 ]
 
@@ -72,11 +76,6 @@ export const codepenList = [
 
 export const menuList = [
   {
-    title: 'CodePen',
-    path: '/demo/',
-    children: codepenList
-  },
-  {
     title: 'Notes',
     path: '/note/',
     children: NoteList
@@ -85,6 +84,10 @@ export const menuList = [
     title: 'Demos',
     path: '/',
     children: [
+      {
+        id: 'demo',
+        title: 'CodePen'
+      },
       {
         id: 'redux',
         title: 'React Redux'

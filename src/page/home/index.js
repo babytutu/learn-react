@@ -11,13 +11,15 @@ function Home (props) {
       {menuList.map(i =>
         <div key={i.title}>
           <h3>{i.title}</h3>
-          <ul>
-            {i.children.map(item =>
-              <li key={item.id}>
-                <Link to={i.path + item.id}>{item.title}</Link>
-              </li>
-            )}
-          </ul>
+          {i.children &&
+            <ul>
+              {i.children.map(item =>
+                <li key={item.id}>
+                  <Link to={i.path + item.id}>{item.title}</Link>
+                </li>
+              )}
+            </ul>
+          }
         </div>
       )}
     </>

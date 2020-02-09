@@ -1,15 +1,10 @@
-import React from 'react'
-import {
-  NavLink,
-  useParams,
-} from 'react-router-dom'
-
+import React, { useState } from 'react'
 import { codepenList, codepenURL } from 'data/list'
 import PageHeader from 'components/pageHeader'
 import Demo from 'components/demo'
 
 function CodePen (props) {
-  const { type } = useParams()
+  const [type, setType] = useState('')
   const url = codepenURL(type)
 
   return (
@@ -18,11 +13,11 @@ function CodePen (props) {
       <ul>
         {codepenList.map((item) =>
           <li key={item.id} className={type === item.id ? 'active' : null}>
-            <NavLink exact to={item.id}>{item.title}</NavLink>
+            <span onClick={() => setType(item.id)}>{item.title}</span>
           </li>
         )}
       </ul>
-      {url &&
+      {type && url &&
         <Demo url={url} />
       }
     </>
