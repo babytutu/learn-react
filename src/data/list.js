@@ -122,6 +122,12 @@ export const apiList = [
   'https://api.apis.guru/v2/specs/amazonaws.com/schemas/2019-12-02/swagger.json',
 ]
 
-export const weatherAPI = 'http://wthrcdn.etouch.cn/weather_mini?city='
-
 export const cityList = ['杭州', '北京', '上海', 'xx']
+
+// 高德开发key
+const key = '642bfc64d46e4dc4ecaf2bbe97510e74'
+// 高德api前缀
+const host = '//restapi.amap.com'
+
+// 天气预报查询
+export const weatherUrl = `${host}/v3/weather/weatherInfo?key=${key}&extensions=all&city=`

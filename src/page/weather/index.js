@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { weatherAPI, cityList } from 'data/list'
+import { weatherUrl, cityList } from 'data/list'
 import PageHeader from 'components/pageHeader'
 
 function Apis (props) {
@@ -10,13 +10,13 @@ function Apis (props) {
   useEffect(() => {
     setLoad(true)
     if (city) {
-      fetch(weatherAPI + city)
+      fetch(weatherUrl + city)
           .then(res => res.json())
           .then(text => {
-            if (text.status === 1000) {
-              setRes(text.data)
+            if (text.infocode === '10000' && text.count === '1') {
+              setRes(text.forecasts[0])
             } else {
-              setRes(text.desc)
+              setRes('Not Found')
             }
             setLoad(false)
           })
@@ -58,10 +58,11 @@ function Apis (props) {
         <>
           <h3>{res.city}</h3>
           <ul>
-            {res.forecast.map(i =>
-              <li key={i.date}>{i.date}【{i.type}】
+            {res.casts.map(i =>
+              <li key={i.date}>{i.date}
                 <ul>
-                  <li>{i.low} - {i.high}</li>
+                  <li>{i.dayweather} ~ {i.nightweather}</li>
+                  <li>{i.nighttemp} ~ {i.daytemp}</li>
                 </ul>
               </li>
             )}
