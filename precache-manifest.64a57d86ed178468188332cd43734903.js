@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "63b2a788f1a0da86faa3c8109101c849",
+    "revision": "54380ffa95d0ab39a7ce6a89fcdd42ea",
     "url": "/learn-react/index.html"
   },
   {
-    "revision": "3b258ca9e8b8f3b891dd",
+    "revision": "6402f592a3cf26624d68",
     "url": "/learn-react/static/css/main.34cd87ed.chunk.css"
   },
   {
-    "revision": "fd14cc8388f8099c4cf7",
-    "url": "/learn-react/static/js/2.a4dd6357.chunk.js"
+    "revision": "6978d1e51a04f809bf1c",
+    "url": "/learn-react/static/js/2.e85e192d.chunk.js"
   },
   {
     "revision": "1b23ba65f027fa0b538ecc6055ad39ba",
-    "url": "/learn-react/static/js/2.a4dd6357.chunk.js.LICENSE"
+    "url": "/learn-react/static/js/2.e85e192d.chunk.js.LICENSE"
   },
   {
-    "revision": "3b258ca9e8b8f3b891dd",
-    "url": "/learn-react/static/js/main.e1ffc85b.chunk.js"
+    "revision": "6402f592a3cf26624d68",
+    "url": "/learn-react/static/js/main.a166434d.chunk.js"
   },
   {
     "revision": "1b71aed738c35da99381",
