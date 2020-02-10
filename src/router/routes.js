@@ -4,6 +4,7 @@ import Demo from 'page/demo'
 import Redux from 'page/redux/index'
 import NoMath from 'page/noMatch'
 import Api from 'page/api'
+import Weather from 'page/weather'
 
 export const Routes = [
   {
@@ -32,6 +33,13 @@ export const Routes = [
     component: Api,
     meta: {
       title: 'API Demo',
+    }
+  },
+  {
+    path: '/weather',
+    component: Weather,
+    meta: {
+      title: 'Weather'
     }
   },
   {

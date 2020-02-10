@@ -95,6 +95,10 @@ export const menuList = [
       {
         id: 'api',
         title: 'API'
+      },
+      {
+        id: 'weather',
+        title: 'Weather',
       }
     ]
   },
@@ -117,3 +121,7 @@ export const apiList = [
   'https://api.apis.guru/v2/specs/amazonaws.com/sagemaker-a2i-runtime/2019-11-07/swagger.json',
   'https://api.apis.guru/v2/specs/amazonaws.com/schemas/2019-12-02/swagger.json',
 ]
+
+export const weatherAPI = 'http://wthrcdn.etouch.cn/weather_mini?city='
+
+export const cityList = ['杭州', '北京', '上海', 'xx']
