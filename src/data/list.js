@@ -122,12 +122,14 @@ export const apiList = [
   'https://api.apis.guru/v2/specs/amazonaws.com/schemas/2019-12-02/swagger.json',
 ]
 
-export const cityList = ['杭州', '北京', '上海', 'xx']
+export const cityList = ['杭州', '北京', '上海']
 
-// 高德开发key
+// amap key
 const key = '642bfc64d46e4dc4ecaf2bbe97510e74'
-// 高德api前缀
+// amap api prefix
 const host = '//restapi.amap.com'
 
-// 天气预报查询
-export const weatherUrl = `${host}/v3/weather/weatherInfo?key=${key}&extensions=all&city=`
+/**
+ * @see https://lbs.amap.com/api/webservice/guide/api/weatherinfo
+ */
+export const weatherUrl = (city = '杭州', extensions = 'all') => `${host}/v3/weather/weatherInfo?key=${key}&extensions=${extensions}&city=${city}`

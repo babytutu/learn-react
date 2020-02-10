@@ -10,7 +10,7 @@ function Apis (props) {
   useEffect(() => {
     setLoad(true)
     if (city) {
-      fetch(weatherUrl + city)
+      fetch(weatherUrl(city))
           .then(res => res.json())
           .then(text => {
             if (text.infocode === '10000' && text.count === '1') {
