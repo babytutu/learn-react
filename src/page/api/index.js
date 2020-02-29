@@ -24,7 +24,7 @@ function Apis (props) {
       <ul>
         {apiList.map(i =>
           <li key={i} className={i === api ? 'active' : ''}>
-            <span onClick={() => setApi(i)}>{i.replace('https://api.apis.guru/v2/specs/amazonaws.com/', '').replace('/swagger.json', '')}</span>
+            <span onClick={() => setApi(i)}>{i.replace(new RegExp(/https:\/\/api.apis.guru\/v2\/specs\/(.*)\/.*\/.*\.json/), '$1')}</span>
           </li>
         )}
       </ul>
