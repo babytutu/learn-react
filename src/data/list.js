@@ -1,7 +1,7 @@
 export const NoteList = [
   {
     id: 'React',
-    title: 'React@16.12.0',
+    title: 'React@16.13.0',
   },
   {
     id: 'Create-React-App',

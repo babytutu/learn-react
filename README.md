@@ -2,7 +2,7 @@
 
 ## Notes
 
-- React@16.12.0
+- React@16.13.0
 - Create React App@3.3.0
 - React Router@5.1.2
 - React Redux@7.1.3
