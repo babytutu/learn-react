@@ -1,10 +1,7 @@
 import Home from 'page/home'
 import Note from 'page/Note'
-import Demo from 'page/demo'
 import Redux from 'page/redux/index'
 import NoMath from 'page/noMatch'
-import Api from 'page/api'
-import Weather from 'page/weather'
 
 export const Routes = [
   {
@@ -15,31 +12,10 @@ export const Routes = [
     }
   },
   {
-    path: '/demo',
-    component: Demo,
-    meta: {
-      title: 'CodePen',
-    }
-  },
-  {
     path: '/redux',
     component: Redux,
     meta: {
       title: 'React Redux Demo',
-    }
-  },
-  {
-    path: '/api',
-    component: Api,
-    meta: {
-      title: 'API Demo',
-    }
-  },
-  {
-    path: '/weather',
-    component: Weather,
-    meta: {
-      title: 'Weather'
     }
   },
   {

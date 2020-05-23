@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
-import RenderMarkdown from 'components/renderMarkdown'
-import PageHeader from 'components/pageHeader'
+import RenderMarkdown from './node_modules/components/renderMarkdown'
+import PageHeader from './node_modules/components/pageHeader'
 
 function Learn(props) {
   const type = props.match.params.type

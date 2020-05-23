@@ -11,29 +11,13 @@
 
 ## Demos
 
-### CodePen
-
-- JSX
-- Component & Props
-- State and Lifecycle
-- Handling Events
-- Conditional Rendering
-- Lists and Keys
-- Forms
-- Refs and the DOM
-- RenderHtml
-- HOOK-useState
-- HOOK-useEffect
-
 ### React Redux
-### API
 
 ## Folder
 ```
 |-- public
 |-- src
 |    |-- components
-|    |-- data
 |    |-- page
 |    |-- redux
 |    |-- router
