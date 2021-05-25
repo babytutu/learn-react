@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.4e074eb2.chunk.css",
-    "main.js": "/static/js/main.fff33523.chunk.js",
-    "main.js.map": "/static/js/main.fff33523.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.45bdb27f.js",
-    "runtime-main.js.map": "/static/js/runtime-main.45bdb27f.js.map",
-    "static/js/2.31fae47b.chunk.js": "/static/js/2.31fae47b.chunk.js",
-    "static/js/2.31fae47b.chunk.js.map": "/static/js/2.31fae47b.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.4e074eb2.chunk.css.map": "/static/css/main.4e074eb2.chunk.css.map",
-    "static/js/2.31fae47b.chunk.js.LICENSE.txt": "/static/js/2.31fae47b.chunk.js.LICENSE.txt"
+    "main.css": "/learn-react/static/css/main.4e074eb2.chunk.css",
+    "main.js": "/learn-react/static/js/main.836e29bf.chunk.js",
+    "main.js.map": "/learn-react/static/js/main.836e29bf.chunk.js.map",
+    "runtime-main.js": "/learn-react/static/js/runtime-main.979db8f4.js",
+    "runtime-main.js.map": "/learn-react/static/js/runtime-main.979db8f4.js.map",
+    "static/js/2.31fae47b.chunk.js": "/learn-react/static/js/2.31fae47b.chunk.js",
+    "static/js/2.31fae47b.chunk.js.map": "/learn-react/static/js/2.31fae47b.chunk.js.map",
+    "index.html": "/learn-react/index.html",
+    "static/css/main.4e074eb2.chunk.css.map": "/learn-react/static/css/main.4e074eb2.chunk.css.map",
+    "static/js/2.31fae47b.chunk.js.LICENSE.txt": "/learn-react/static/js/2.31fae47b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.45bdb27f.js",
+    "static/js/runtime-main.979db8f4.js",
     "static/js/2.31fae47b.chunk.js",
     "static/css/main.4e074eb2.chunk.css",
-    "static/js/main.fff33523.chunk.js"
+    "static/js/main.836e29bf.chunk.js"
   ]
 }
