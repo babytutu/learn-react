@@ -1,7 +1,7 @@
 import React from 'react'
-import Counter from 'redux/demo/counter'
-import Header from 'redux/demo/header'
-import PageHeader from 'components/pageHeader'
+import Counter from 'src/redux/demo/counter'
+import Header from 'src/redux/demo/header'
+import PageHeader from 'src/components/pageHeader'
 
 function Demo(props) {
   return (

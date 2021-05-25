@@ -1,20 +1,21 @@
 import React from 'react';
-import Markdown from 'react-markdown'
+import ReactMarkdown from 'react-markdown'
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { tomorrow } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-function code ({ language, value }) {
-  return (
-    <SyntaxHighlighter language={language} style={tomorrow}>
-      {value}
-    </SyntaxHighlighter>
+function code ({ node, inline, className, children, ...props }) {
+  const match = /language-(\w+)/.exec(className || '')
+  return !inline && match ? (
+    <SyntaxHighlighter style={tomorrow} language={match[1]} PreTag="div" children={String(children).replace(/\n$/, '')} {...props} />
+  ) : (
+    <code className={className} {...props} />
   )
 }
 
 function RenderMarkdown ({ markdown }) {
   return (
-    <Markdown source={markdown}
-      renderers={{
+    <ReactMarkdown children={markdown}
+      components={{
         code
       }} />
   )

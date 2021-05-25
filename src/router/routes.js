@@ -1,7 +1,7 @@
-import Home from 'page/home'
-import Note from 'page/Note'
-import Redux from 'page/redux/index'
-import NoMath from 'page/noMatch'
+import Home from 'src/page/home'
+import Note from 'src/page/Note'
+import Redux from 'src/page/redux/index'
+import NoMath from 'src/page/noMatch'
 
 export const Routes = [
   {

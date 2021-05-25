@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 
 import { Routes } from './routes'
-import BackToHome from 'components/backToHome'
+import BackToHome from 'src/components/backToHome'
 
 function RouteList () {
   return (

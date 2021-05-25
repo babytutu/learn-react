@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
-import RenderMarkdown from 'components/renderMarkdown'
-import PageHeader from 'components/pageHeader'
+import RenderMarkdown from 'src/components/renderMarkdown'
+import PageHeader from 'src/components/pageHeader'
 
 function Learn(props) {
   const type = props.match.params.type
@@ -10,7 +10,7 @@ function Learn(props) {
 
   useEffect(() => {
     if (!noteList.length) {
-      fetch('data/menu.json')
+      fetch(process.env.PUBLIC_URL + '/data/menu.json')
       .then(res => res.json())
       .then(text => {
         setNoteList(text[0].children)
@@ -18,7 +18,7 @@ function Learn(props) {
     } else {
       const isActive = noteList.filter(i => i.id === type).length
       if (isActive) {
-        fetch(`markdown/${type}.md`)
+        fetch(process.env.PUBLIC_URL + `/markdown/${type}.md`)
           .then(res => res.text())
           .then(text => setMarkdown(text))
       } else {
