@@ -24,18 +24,19 @@ React Redux provides <Provider />, which makes the Redux store available to the 
 
 ```js
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 
 import { Provider } from 'react-redux'
 import store from './store'
 
 import App from './App'
 
-ReactDOM.render(
+const root = createRoot(document.getElementById('root'))
+
+root.render(
   <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById('root')
+    <Router />
+  </Provider>
 )
 ```
 
@@ -258,7 +259,7 @@ render(
 
 ```js
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import { Provider } from 'react-redux'
 import { Router, Route } from 'react-router-dom'
 
@@ -268,15 +269,16 @@ import { Bar } from './Bar'
 
 import store from './store'
 
-ReactDOM.render(
+const root = createRoot(document.getElementById('root'))
+
+root.render(
   <Provider store={store}>
     <Router>
       <Route exact path="/" component={App} />
       <Route path="/foo" component={Foo} />
       <Route path="/bar" component={Bar} />
     </Router>
-  </Provider>,
-  document.getElementById('root')
+  </Provider>
 )
 ```
 
@@ -287,11 +289,12 @@ ReactDOM.render(
 ```js
 const store = createStore(rootReducer)
 
-ReactDOM.render(
+const root = createRoot(document.getElementById('root'))
+
+root.render(
   <Provider store={store}>
     <App />
-  </Provider>,
-  document.getElementById('root')
+  </Provider>
 )
 ```
 

@@ -32,12 +32,13 @@ npm start
 
 ```js
 import React from 'react'
-import ReactDOM from "react-dom"
+import { createRoot } from 'react-dom/client';
 
-ReactDOM.render(
-  <h1>Hello, world!</h1>,
-  document.getElementById('root')
-);
+const root = createRoot(document.getElementById('root'))
+
+root.render(
+  <h1>Hello, world!</h1>
+)
 ```
 
 ## Components & Props
@@ -46,7 +47,7 @@ ReactDOM.render(
 
 ```js
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client';
 
 class Welcome extends React.Component {
   render() {
@@ -54,9 +55,10 @@ class Welcome extends React.Component {
   }
 }
 
-ReactDOM.render(
-  <Welcome name="TUTU" />,
-  document.getElementById('root')
+const root = createRoot(document.getElementById('root'))
+
+root.render(
+  <Welcome name="TUTU" />
 )
 ```
 
@@ -66,7 +68,7 @@ ReactDOM.render(
 
 ```js
 import React from 'react'
-import ReactDOM from "react-dom"
+import { createRoot } from 'react-dom/client';
 
 class Clock extends React.Component {
   constructor(props) {
@@ -97,9 +99,10 @@ class Clock extends React.Component {
   }
 }
 
-ReactDOM.render(
-  <Clock />,
-  document.getElementById('root')
+const root = createRoot(document.getElementById('root'))
+
+root.render(
+  <Clock />
 )
 ```
 
@@ -109,7 +112,7 @@ ReactDOM.render(
 
 ```js
 import React from 'react'
-import ReactDOM from "react-dom"
+import { createRoot } from 'react-dom/client';
 
 class Handler extends React.Component {
   handleClick = (id, e) => {
@@ -124,9 +127,10 @@ class Handler extends React.Component {
   }
 }
 
-ReactDOM.render(
-  <Handler />,
-  document.getElementById('root')
+const root = createRoot(document.getElementById('root'))
+
+root.render(
+  <Handler />
 )
 ```
 
@@ -136,7 +140,7 @@ ReactDOM.render(
 
 ```js
 import React from 'react'
-import ReactDOM from "react-dom"
+import { createRoot } from 'react-dom/client';
 
 class Condition extends React.Component {
   state = {
@@ -162,9 +166,10 @@ class Condition extends React.Component {
   }
 }
 
-ReactDOM.render(
-  <Condition />,
-  document.getElementById('root')
+const root = createRoot(document.getElementById('root'))
+
+root.render(
+  <Condition />
 )
 ```
 
@@ -174,7 +179,7 @@ ReactDOM.render(
 
 ```js
 import React from 'react'
-import ReactDOM from "react-dom"
+import { createRoot } from 'react-dom/client';
 
 class Lists extends React.Component {
   state = {
@@ -193,9 +198,10 @@ class Lists extends React.Component {
   }
 }
 
-ReactDOM.render(
-  <Lists />,
-  document.getElementById('root')
+const root = createRoot(document.getElementById('root'))
+
+root.render(
+  <Lists />
 )
 ```
 
@@ -205,7 +211,7 @@ ReactDOM.render(
 
 ```js
 import React from 'react'
-import ReactDOM from "react-dom"
+import { createRoot } from 'react-dom/client';
 
 class Forms extends React.Component {
   state = {
@@ -240,9 +246,10 @@ class Forms extends React.Component {
   }
 }
 
-ReactDOM.render(
-  <Forms />,
-  document.getElementById('root')
+const root = createRoot(document.getElementById('root'))
+
+root.render(
+  <Forms />
 )
 ```
 
@@ -254,7 +261,7 @@ ReactDOM.render(
 
 ```js
 import React from 'react'
-import ReactDOM from "react-dom"
+import { createRoot } from 'react-dom/client';
 
 class Ref extends React.Component {
   constructor(props) {
@@ -273,9 +280,10 @@ class Ref extends React.Component {
   }
 }
 
-ReactDOM.render(
-  <Ref />,
-  document.getElementById('root')
+const root = createRoot(document.getElementById('root'))
+
+root.render(
+  <Ref />
 )
 ```
 
@@ -452,9 +460,10 @@ function RenderHtml() {
   return <div dangerouslySetInnerHTML={HTML}></div>
 }
 
-ReactDOM.render(
+const root = createRoot(document.getElementById('root'))
+
+root.render(
   <RenderHtml />,
-  document.getElementById('root')
 )
 ```
 
@@ -505,9 +514,10 @@ function Example() {
   );
 }
 
-ReactDOM.render(
-  <Example />,
-  document.getElementById('root')
+const root = createRoot(document.getElementById('root'))
+
+root.render(
+  <Example />
 )
 ```
 
@@ -535,9 +545,10 @@ function Example() {
   );
 }
 
-ReactDOM.render(
-  <Example />,
-  document.getElementById('root')
+const root = createRoot(document.getElementById('root'))
+
+root.render(
+  <Example />
 )
 ```
 
