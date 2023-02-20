@@ -2,18 +2,20 @@
 
 ## Notes
 
-- React@17.0.2
+- React@18.2.0
 - Create React App
-- React Router@5.2.0
-- React Redux@7.2.4
+- React Router@5.3.4
+- React Redux@8.0.5
 - React Redux Demo
 - Testing Overview
+- sandpack-react
 
 ## Demos
 
 ### React Redux
 
 ## Folder
+
 ```
 |-- public
 |-- src
@@ -24,6 +26,4 @@
 |    |-- test
 |    |-- index.css
 |    |-- index.js
-```
-
 ```

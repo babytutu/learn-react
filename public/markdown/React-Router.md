@@ -192,7 +192,7 @@ function getLocation () {
 
 ```js
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client'
 import {
   BrowserRouter as Router,
   Switch,
@@ -205,7 +205,9 @@ function getParams () {
   return <div>id: {id}</div>
 }
 
-ReactDOM.render(
+const root = createRoot(document.getElementById('root'))
+
+root.render(
   <Router>
     <Switch>
       <Route exact path="/">
@@ -216,8 +218,7 @@ ReactDOM.render(
       </Route>
     </Switch>
   </Router>,
-  node
-);
+)
 ```
 
 #### useRouteMatch
