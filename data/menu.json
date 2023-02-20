@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Notes",
+    "path": "/note/",
+    "children": [
+      {
+        "id": "React",
+        "title": "React@17.0.2"
+      },
+      {
+        "id": "Create-React-App",
+        "title": "Create React App@3.3.0"
+      },
+      {
+        "id": "React-Router",
+        "title": "React Router@5.2.0"
+      },
+      {
+        "id": "React-Redux",
+        "title": "React Redux@7.2.4"
+      },
+      {
+        "id": "React-Redux-Demo",
+        "title": "React Redux Demo"
+      },
+      {
+        "id": "Testing-Overview",
+        "title": "Testing Overview"
+      }
+    ]
+  },
+  {
+    "title": "Demos",
+    "path": "/",
+    "children": [
+      {
+        "id": "redux",
+        "title": "React Redux"
+      },
+      {
+        "id": "sandpack",
+        "title": "Sandpack"
+      }
+    ]
+  }
+]
