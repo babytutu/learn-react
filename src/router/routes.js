@@ -2,6 +2,7 @@ import Home from 'src/page/home'
 import Note from 'src/page/Note'
 import Redux from 'src/page/redux/index'
 import NoMath from 'src/page/noMatch'
+import sandpack from 'src/page/sandpack'
 
 export const Routes = [
   {
@@ -16,6 +17,13 @@ export const Routes = [
     component: Redux,
     meta: {
       title: 'React Redux Demo',
+    }
+  },
+  {
+    path: '/sandpack',
+    component: sandpack,
+    meta: {
+      title: 'Sandpack',
     }
   },
   {
